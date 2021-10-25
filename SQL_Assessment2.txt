@@ -1,1 +1,28 @@
-   
+   CREATE TABLE Task (
+    Task_id int primary key,
+    Tname varchar(30),
+    description varchar(50),
+    priority int,
+    assignedOn date,
+    modiefiedOn date,
+    Bookmark varchar(30)
+);
+
+CREATE TABLE emp(
+    emp_ID int,
+    ename varchar(30),
+    contact int,
+    email  varchar(30),
+    assigned_task int,
+    status varchar(30),
+    description varchar(50),
+    FOREIGN KEY (assigned_task) REFERENCES Task(Task_id)
+);
+
+CREATE TABLE admin(
+    a_id int,
+    admin_name varchar(30),
+    contact int,
+    email  varchar(30)
+);
+
